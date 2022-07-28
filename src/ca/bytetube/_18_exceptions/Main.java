@@ -6,17 +6,40 @@ import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-
+/**
+ * 1.不管是Checked Exception还是Unchecked Exception，都可以通过try-catch,throws去处理
+ * 2.不管是Checked Exception还是Unchecked Exception，只要最终传递到了jvm，都会导致程序终止运行
+ * 3.Checked Exception：编译器强制要求通过try-catch,throws去处理
+ * 4.Unchecked Exception：编译器不强制要求通过try-catch,throws去处理
+ */
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         //test1();
         //test2();
         //test3();
 //        test4();
 //        test5();
-        test6();
+//        test6();
+        method1();
+        System.out.println(1);
+    }
+
+
+
+    public static void method1() throws FileNotFoundException {
+        method2();
+    }
+
+    public static void method2() throws FileNotFoundException {
+        method3();
+    }
+
+    public static void method3() throws FileNotFoundException {
+        PrintWriter  out = new PrintWriter("/Users1/dalluo/Desktop/finally2.txt");
+//        out.print("how are you!");
+        out.close();
     }
 
 
