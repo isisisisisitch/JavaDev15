@@ -1,7 +1,7 @@
 package ca.bytetube._20_collections;
 
 import java.util.*;
-import java.util.function.Consumer;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -9,12 +9,84 @@ public class Main {
         //test4();
         //test5();
 //        test6();
-        test7();
+//        test7();
+        test8();
     }
 
+
+    public static void test9(){
+        //LinkedList
+    }
     public static void test8(){
+
+//        List<Integer>List = new ArrayList<>();
+//        List.add(1);
+//        List.add(12);
+//        List.add(13);
+//        List.add(0,12);
+//        System.out.println(List);
+//
+//        int size = List.size();
+//        for (int i = 0; i <size; size--) {
+//            List.remove(i);
+//
+//        }
+//        System.out.println(List);
+
         ArrayList<Integer> arrayList = new ArrayList<>();
-        arrayList.add(10);
+        arrayList.add(11);
+        arrayList.add(12);
+        arrayList.add(13);
+        arrayList.add(14);
+
+
+
+        ListIterator<Integer> iterator = arrayList.listIterator();
+        while (iterator.hasNext()){
+            if ((iterator.next() & 1 )== 0) {
+                iterator.remove();
+            }
+
+            // arrayList.remove(next);
+
+        }
+//        //10,11,12,13,14,100
+        System.out.println(arrayList);
+
+//         int modCount = 0;
+//        int oldCount = modCount;
+//        for (int i = 0;i < 10; i++){
+//            // add/remove
+//            modCount++;
+//            if (oldCount != modCount) {
+//                    new ConcurrentModificationException();
+//            }
+//        }
+//
+//        int size = arrayList.size();//4
+        //12,14
+
+//        for (int i = 0; i < size; i++) {
+//           arrayList.remove(i);//[12, 14]
+//        }
+        //personA
+//        for (Integer element : arrayList) { //
+//            //personB
+//            arrayList.add(100);//ConcurrentModificationException
+//        }
+
+//        arrayList.forEach(new Consumer<Integer>() {
+//            @Override
+//            public void accept(Integer element) {
+//                arrayList.remove(element);//ConcurrentModificationException
+//            }
+//        });
+
+
+
+
+       // System.out.println(arrayList);
+
     }
 
     public static void test7(){
