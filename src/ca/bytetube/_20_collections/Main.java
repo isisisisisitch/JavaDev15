@@ -10,14 +10,34 @@ public class Main {
         //test5();
 //        test6();
 //        test7();
-        test8();
+//        test8();
+        test10();
+    }
+
+    public static void test11() {
+        Queue<Integer> queue = new LinkedList<>();//
+
+    }
+
+    public static void test10() {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(10);
+        stack.push(11);
+        stack.push(12);
+        stack.push(13);
+        Integer num = stack.peek();
+        System.out.println(num);
+        System.out.println(stack.size());
+
+
     }
 
 
-    public static void test9(){
+    public static void test9() {
         //LinkedList
     }
-    public static void test8(){
+
+    public static void test8() {
 
 //        List<Integer>List = new ArrayList<>();
 //        List.add(1);
@@ -40,10 +60,9 @@ public class Main {
         arrayList.add(14);
 
 
-
         ListIterator<Integer> iterator = arrayList.listIterator();
-        while (iterator.hasNext()){
-            if ((iterator.next() & 1 )== 0) {
+        while (iterator.hasNext()) {
+            if ((iterator.next() & 1) == 0) {
                 iterator.remove();
             }
 
@@ -83,20 +102,18 @@ public class Main {
 //        });
 
 
-
-
-       // System.out.println(arrayList);
+        // System.out.println(arrayList);
 
     }
 
-    public static void test7(){
-        ClassRoom room = new ClassRoom("bytetube","dal","david");
-        for (String s: room) {
+    public static void test7() {
+        ClassRoom room = new ClassRoom("bytetube", "dal", "david");
+        for (String s : room) {
             System.out.println(s);
         }
     }
 
-    public static void test6(){
+    public static void test6() {
         List<Integer> list = new ArrayList<>();
         list.add(10);
         list.add(12);
@@ -123,7 +140,7 @@ public class Main {
 //       }
 
         int index = 0;
-        for (Integer element:list) {
+        for (Integer element : list) {
             System.out.println(element);
             index++;
             if (index == 3) break;
@@ -136,7 +153,7 @@ public class Main {
     }
 
 
-    public static void test5(){
+    public static void test5() {
         List<Integer> list = new ArrayList<>();
         list.add(10);
         list.add(12);
@@ -147,11 +164,11 @@ public class Main {
     }
 
 
-    public static void test4(){
+    public static void test4() {
 
 //        Object[] array3 = new Object[10];
-       // Object[] array1 = {11,22,33};
-        Object[] array1 = new Object[]{11,22,33};//Obj
+        // Object[] array1 = {11,22,33};
+        Object[] array1 = new Object[]{11, 22, 33};//Obj
 
 
         Integer[] array2 = (Integer[]) array1;
@@ -159,20 +176,20 @@ public class Main {
 
     }
 
-    public static void test3(){
+    public static void test3() {
         List<Integer> list = new ArrayList<>();
         list.add(10);
         list.add(12);
         list.add(13);
         Object[] array = list.toArray();
-        for (Object obj :array) {
+        for (Object obj : array) {
             System.out.println(obj);
         }
 
     }
 
 
-    public static void test2(){
+    public static void test2() {
         List<Integer> list = new ArrayList<>();
         list.add(10);
         list.add(12);
@@ -190,7 +207,7 @@ public class Main {
     }
 
 
-    public static void test1(){
+    public static void test1() {
         List list = new ArrayList<>();
         list.add(10);
         list.add(11);

@@ -28,7 +28,7 @@ public class Student<T extends Comparable<T>> implements Comparable<Student<T>>{
 
     @Override
     public int compareTo(Student<T> o) {
-        return o.score.compareTo(score);
+        return this.score.compareTo(o.score);
     }
 
     @Override
