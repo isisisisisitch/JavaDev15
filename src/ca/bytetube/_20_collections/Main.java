@@ -2,6 +2,8 @@ package ca.bytetube._20_collections;
 
 import java.util.*;
 
+import java.util.Map;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +13,85 @@ public class Main {
 //        test6();
 //        test7();
 //        test8();
-        test10();
+//        test10();
+//        test12();
+//        test13();
+          test14();
+    }
+
+
+    public static void test14(){
+        // <key,value>
+        Map<String,Integer> map = new TreeMap<>();
+        map.put("Jack",10);
+        map.put("Rose",11);
+        map.put("Jim",12);
+        map.put("Jack",13);
+        map.put("Kate",14);
+        //Set<String> keys = map.keySet();
+//        for (String key : keys) {
+//            System.out.print(key + " ");
+//        }
+
+//        Collection<Integer> values = map.values();
+//        for (Integer v :values) {
+//            System.out.print(v + " ");
+//        }
+        Set<Map.Entry<String, Integer>> entries = map.entrySet();
+        for (Map.Entry<String, Integer> entry :entries) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            System.out.println("key:"+ key + ", value:"+ value);
+        }
+
+
+    }
+
+
+
+    public static void test13(){
+        // <key,value>
+        Map<String,Integer> map = new HashMap<>();
+        map.put("Jack",10);
+        map.put("Rose",11);
+        map.put("Jim",12);
+        map.put("Jack",13);
+        map.put("Kate",14);
+        System.out.println(map.size());
+        System.out.println(map.get("Jack"));
+        System.out.println(map);
+
+    }
+
+    public static void test12(){
+
+        Set<String> set = new TreeSet<>();
+        set.add("Jack");
+        set.add("Rose");
+        set.add("Jim");
+        set.add("Jack");
+        set.add("Kate");
+
+        set.forEach((s)-> {
+                System.out.println(s);
+            });
+
+//        Iterator<String> iterator = set.iterator();
+//        while (iterator.hasNext()){
+//            System.out.println(iterator.next());
+//        }
+
+//        for (String element : set) {
+//            System.out.print(element+ " ");
+//        }
+
+//        System.out.println(set.size());
+//        System.out.println(set);
+//        if (set.remove("Rose")) {
+//            //...
+//        }
+
+
     }
 
     public static void test11() {
